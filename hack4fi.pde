@@ -124,6 +124,8 @@ int[][] whs = {
 };
 
 boolean skip = true;
+boolean started = false;
+boolean saving = true;
 
 float aniDuration = 2.0;
 
@@ -143,6 +145,8 @@ float minScale = 0.0001;
 float ratioWinShrink, ratioSmall, ratioBig, scaleSmall=1, scaleBig=1, xSmall=0, ySmall=0, xBig=0, yBig=0, ratioSmallBig;
 float xSmallRel = 0, ySmallRel = 0;
 
+int frame = 0, saved = 0;
+
 void setup() {
   size(winWidth, winHeight);
   background(255);
@@ -159,6 +163,12 @@ void draw() {
   // draw small image
   tint(255, opacity);
   drawImage(imgSmall, widthSmall, xSmall, ySmall);
+  if (!started || !saving) return;
+  if (frame%1==0 && saved < 100) {
+    saveFrame("output/frame-" + (saved<10?"0"+saved:saved) + ".jpg");
+    saved++;
+  }
+  frame++;
 }
 
 void drawImage(PImage img, float w, float x, float y) {
@@ -171,7 +181,7 @@ void drawImage(PImage img, float w, float x, float y) {
     PImage tmp = img.get(newx, newy, neww, newh);
     tmp.resize(winWidth, 0);
     image(tmp, 0, 0);
-    if (millis()%500<10) println(img.width, tmpRatio, newx, newy, neww, newh);
+    // if (millis()%500<10) println(img.width, tmpRatio, newx, newy, neww, newh);
   } else {
     if (w<=0) return;
     img.resize((int)w, 0);
@@ -217,6 +227,7 @@ void calculateTween() {
 }
 
 void mouseReleased() {
+  started = !started;
   if (skip) {
     skip = false;
     makeAni();

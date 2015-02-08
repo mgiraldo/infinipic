@@ -4,6 +4,6 @@ An infinite photograph zoom out movie maker inspired by [Istvan Banyan's Zoom](h
 
 ![example animation](animated.gif)
 
-Made with Python and Processing. Uses [Ani](http://www.looksgood.de/libraries/Ani/) and [OpenCV](http://opencv.org/)
+Made with Python and Processing. Uses [Ani](http://www.looksgood.de/libraries/Ani/) and [OpenCV](http://opencv.org/).
 
 Made for [#hack4fi 2015](http://hack4.fi/). Computer vision part is available in [this notebook](http://nbviewer.ipython.org/gist/mgiraldo/653014a14cb4cf6b490e).

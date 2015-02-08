@@ -1,6 +1,6 @@
 # infinipic
 
-An infinite photograph zoom out movie maker inspired by [Istvan Banyan's Zoom](https://www.youtube.com/watch?v=sTww-fCuc7Y) that uses photographs from the [Swedish poet Edith Södergran](https://en.wikipedia.org/wiki/Edith_S%C3%B6dergran).
+An infinite photograph zoom out movie maker inspired by [Istvan Banyan's Zoom](https://www.youtube.com/watch?v=sTww-fCuc7Y) that uses [photographs](https://www.flickr.com/photos/slsarkiva/sets/72157644581542379) from the [Swedish poet Edith Södergran](https://en.wikipedia.org/wiki/Edith_S%C3%B6dergran).
 
 ![example animation](animated.gif)
 

@@ -127,7 +127,7 @@ boolean skip = true;
 boolean started = false;
 boolean saving = true;
 
-float aniDuration = 2.0;
+float aniDuration = 1.5;
 
 PImage imgBig, imgSmall;
 
@@ -164,8 +164,8 @@ void draw() {
   tint(255, opacity);
   drawImage(imgSmall, widthSmall, xSmall, ySmall);
   if (!started || !saving) return;
-  if (frame%1==0 && saved < 100) {
-    saveFrame("output/frame-" + (saved<10?"0"+saved:saved) + ".jpg");
+  if (frame%1==0) {
+    saveFrame("output/frame-" + nf(saved, 10) + ".jpg");
     saved++;
   }
   frame++;
@@ -219,6 +219,7 @@ void loadNext() {
   currentImage++;
   if (currentImage >= images.length) {
     currentImage = 0;
+    if (saving) saving = false;
   }
 }
 

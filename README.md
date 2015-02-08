@@ -2,7 +2,7 @@
 
 An infinite photograph zoom out movie maker inspired by [Istvan Banyan's Zoom](https://www.youtube.com/watch?v=sTww-fCuc7Y) that uses photographs from the [Swedish poet Edith Södergran](https://en.wikipedia.org/wiki/Edith_S%C3%B6dergran).
 
-![animated.gif]
+![example animation](animated.gif)
 
 Made with Python and Processing.
 

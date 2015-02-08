@@ -125,7 +125,7 @@ int[][] whs = {
 
 boolean skip = true;
 boolean started = false;
-boolean saving = true;
+boolean saving = false;//true;
 
 float aniDuration = 1.5;
 
